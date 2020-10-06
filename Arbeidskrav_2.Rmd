@@ -3,17 +3,6 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-```{r set up}
-library(modelr)
-library(ggplot2)
-library(ggpubr)
-```
+Introduksjon
 
-
-
-
-```{r}
-plot(cars)
-```
-
-
+Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. Vi kan også lese om forskjellene som er mellom kjønn og hva det betyr for lønnen din. Hvilke andre egenskaper er det som er med på å påvirke lønnen til en person. Vi skal her se på hvilken betydning høyde har for årslønnen til en person, og skal også se på andre variabler som kan ha påvirkning på dette. 
