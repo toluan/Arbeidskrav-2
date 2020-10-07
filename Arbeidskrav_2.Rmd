@@ -30,7 +30,8 @@ ggplot(heights, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")+
     facet_grid(~ marital)
 ```
-
+Totalt sett ser det ut som at variablene er så godt som normalfordelt. Alle variablene har den største samlingen i midten 
+Det ble regnet et gjennomsnitt av de to øverste verdiene og gjennomsnittet ble brukt til å erstatte alle verdiene i øverste siktet. Dette er sikkert personen som tjener langt over hva som er normalt å tjene. 
 
 ```{r}
 heightsPosInc <-subset(heights, income>0)
