@@ -76,5 +76,5 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 ```{r echo=FALSE}
 summary(lm(income~height, data = heights))
 ```
-
+ 
 ## Konklusjon
