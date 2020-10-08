@@ -9,7 +9,7 @@ output:
   word_document: default
   pdf_document: default
 ---
- 
+  
 ```{r set up, echo=FALSE, include=FALSE}
 library(modelr)
 library(ggplot2)
