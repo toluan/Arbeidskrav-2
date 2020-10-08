@@ -1,0 +1,10 @@
+"0","```r
+
+gg1 <- ggplot(data = mtcars, mapping = aes(x = disp, y = mpg)) +
+    geom_point()
+gg2 <- ggplot(data = mtcars) +
+    geom_point(mapping = aes(x = disp, y = mpg))
+
+ggplot(data = mtcars, mapping = aes(x = disp, y = mpg)) +
+    geom_point(data = mtcars, mapping = aes(x = disp, y = mpg))
+```"

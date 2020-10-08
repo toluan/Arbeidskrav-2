@@ -1,0 +1,5 @@
+"0","heightsPosInc <-subset(heights, income>0)"
+"0","ggplot(heightsPosInc, mapping =aes(x = height, y = income))+"
+"0","    scale_y_continuous(trans = scales::log_trans())+"
+"0","    geom_point(position = ""jitter"")+"
+"0","    geom_smooth(method = ""lm"")"

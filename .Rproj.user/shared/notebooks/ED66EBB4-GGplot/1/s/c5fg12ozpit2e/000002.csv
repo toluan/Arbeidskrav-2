@@ -1,0 +1,6 @@
+"0","```r
+ggplot(data = mtcars, mapping = aes(x = hp, y = mpg)) +
+  facet_grid(ordered(carb, labels = c(\"1 Carb\", \"2 Carb.\", \"3 Carb.\", \"4 Carb.\", \"6 Carb.\", \"8 Carb.\" )) ~ ordered(cyl, labels = c(\"4 cyl.\", \"6 cyl.\", \"8 cyl.\")))+
+geom_point()+
+    geom_smooth(method = \"lm\", se = FALSE) 
+```"

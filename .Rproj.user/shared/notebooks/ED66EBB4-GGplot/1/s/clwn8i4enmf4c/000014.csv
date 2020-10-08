@@ -1,0 +1,7 @@
+"0","```r
+
+ggplot(data = mtcars, mapping = aes(x = disp, y = mpg)) +
+    geom_point() +
+    geom_smooth(method = \"lm\", se = FALSE) +
+    geom_smooth(method = MASS::rlm, colour = 'Red', se = FALSE)
+```"

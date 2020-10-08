@@ -1,0 +1,16 @@
+"0","```r
+p3 <- ggplot(data = mtcars, mapping = aes(mpg, y=factor(cyl))) +
+  geom_boxplot() +
+  labs(y = \"cyl\")
+
+p4 <- ggplot(data = mtcars, mapping = aes(mpg, y=factor(cyl))) +
+  geom_violin() +
+  labs(y = \"cyl\")
+
+p5 <- ggplot(data = mtcars, mapping = aes(mpg, fill = factor(cyl), colour = factor(cyl))) +
+  geom_density(alpha = 0.2, na.rm = TRUE)
+
+ggarrange(p5, 
+          ggarrange(p3, p4, ncol = 2, labels = c(\"geom_boxplot()\", \"geom_violin()\")),
+          nrow = 2, labels= c(\"geom_density()\"))
+```"

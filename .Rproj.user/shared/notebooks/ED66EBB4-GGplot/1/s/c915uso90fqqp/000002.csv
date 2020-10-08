@@ -1,0 +1,4 @@
+"0","```r
+ggplot(data = mtcars, mapping = aes(mpg)) +
+  geom_histogram()
+```"

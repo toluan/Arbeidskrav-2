@@ -1,0 +1,6 @@
+"0","```r
+x <- seq(from = 4, to = 8, by = 2)
+paste(\"avg, car\", x, \"cyl.\", sep = \" \")
+```"
+"1","[1] \"avg, car 4 cyl.\" \"avg, car 6 cyl.\" \"avg, car 8 cyl.\"
+"
