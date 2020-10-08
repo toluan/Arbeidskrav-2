@@ -10,7 +10,7 @@ library(knitr)
 library(ggplot2)
 ```
 
- 
+  
 ## Introduksjon 
 
 Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. Vi kan også lese om forskjellene som er mellom kjønn og hva det betyr for lønnen. Hvilke andre variabler er det som kan være med på å påvirke lønnen til en person. Vi skal her se på hvilken betydning høyde har for årslønnen til en person, og skal også se på andre variabler som kan ha påvirkning på dette. 
