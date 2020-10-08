@@ -10,7 +10,7 @@ library(knitr)
 library(ggplot2)
 ```
 
-
+ 
 ## Introduksjon 
 
 Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. Vi kan også lese om forskjellene som er mellom kjønn og hva det betyr for lønnen. Hvilke andre variabler er det som kan være med på å påvirke lønnen til en person. Vi skal her se på hvilken betydning høyde har for årslønnen til en person, og skal også se på andre variabler som kan ha påvirkning på dette. 
@@ -50,6 +50,31 @@ ggplot(heights, mapping =aes(x = height, y = income))+
 
 Det ble regnet et gjennomsnitt av de to øverste verdiene og gjennomsnittet ble brukt til å erstatte alle verdiene i øverste siktet. Dette er sikkert personen som tjener langt over hva som er normalt å tjene. 
 
+```{r}
+ggplot(heights) + 
+  geom_bar(mapping = aes(x = height))
+```
+
+```{r}
+ggplot(heights, mapping = aes(height)) +
+  geom_histogram(mapping = NULL,
+  data = NULL,
+  stat = "bin",
+  position = "stack",
+  binwidth = 0.5,
+  bins = 30,
+  na.rm = FALSE,
+  orientation = NA,
+  show.legend = NA,
+  inherit.aes = TRUE)
+```
+
+```{r}
+library(lattice)
+histogram(~height | factor(sex),  type = "income", heights)
+```
+
+
 ```{r echo=FALSE}
 heightsPosInc <-subset(heights, income>0)
 ggplot(heightsPosInc, mapping =aes(x = heightInt, y = income))+
@@ -69,7 +94,7 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 heightsPosInc <-subset(heights, income>0)
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(position = "jitter")+
-    geom_smooth(method = "lm")
+    geom_smooth(method = MASS::rlm, se = FALSE)
 ```
 
 
