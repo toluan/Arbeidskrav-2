@@ -16,7 +16,12 @@ library(ggplot2)
 Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. Vi kan også lese om forskjellene som er mellom kjønn og hva det betyr for lønnen. Hvilke andre variabler er det som kan være med på å påvirke lønnen til en person. Vi skal her se på hvilken betydning høyde har for årslønnen til en person, og skal også se på andre variabler som kan ha påvirkning på dette. 
 
 ## Litteraturgjennomgang 
+For å katrlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt famillieforhold og muskelstyrke.
 
+Kognitive egenskaper oppfatter mentale funksjoner som sansing, oppmerksomhet, hukommelse og logiske evner. @malt2019
+Ikke kognitive egenskaper refererer til personlige egenskaper som viljestyrke, utholdenhet, karisma og lederegenskaper. Foreldrenes sosioøkonomiske egenskaper (inntekt, skolegang) samt familieforholdet (genetikk, verdier og normer) ble også vurdert som mulige årsak til ulikheter. @lundborg2014.
+Deltagelse i friidrett, skoleklubber og dating hører til sosiale aktiviteter. @cinnirella2009
+ 
  
 ## Oppsummerende statistikk
 
