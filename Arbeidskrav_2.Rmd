@@ -17,7 +17,7 @@ Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om 
 
 ## Litteraturgjennomgang 
 
-
+ 
 ## Oppsummerende statistikk
 
 ```{r echo=FALSE}
@@ -32,7 +32,7 @@ kable(summary(heights[,5:9]))
 ## Plot
 ```{r echo=FALSE}
 ggplot(heights, mapping =aes(x = height, y = income))+
-    geom_point()
+    geom_point(color = "brown3")
 ```
 ```{r echo=FALSE}
 ggplot(heights, mapping =aes(x = height, y = income))+
