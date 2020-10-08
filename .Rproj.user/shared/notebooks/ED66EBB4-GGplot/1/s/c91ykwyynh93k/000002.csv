@@ -1,0 +1,29 @@
+"0","```r
+p1 <- ggplot(data = mtcars, mapping = aes(x = disp, y = mpg)) +
+  geom_point(aes(colour = factor(cyl))) +
+  geom_smooth(method = \"lm\", se = FALSE) +
+  geom_smooth(method = MASS::rlm, colour = 'Red', se = FALSE) +
+  geom_point(data = df_mean, mapping = aes(x = disp, y = mpg), colour = \"black\", size = 3) + 
+  geom_text(data = df_mean, mapping = aes(x = disp, y = mpg, label = cyl), 
+            colour = \"black\", vjust = 1.5, hjust = 0.2) +
+  labs(colour = \"cyl\") +
+  theme(legend.position = \"bottom\")
+
+
+p2 <- ggplot(data = mtcars, mapping = aes(x = disp, y = mpg)) +
+  geom_point(aes(colour = factor(cyl))) +
+  geom_smooth(method = \"lm\", se = FALSE) +
+  geom_smooth(method = MASS::rlm, colour = 'Red', se = FALSE) +
+  geom_point(data = df_mean, mapping = aes(x = disp, y = mpg), colour = \"black\", size = 3) + 
+# also try with alpha = 0.25
+  geom_label(data = df_mean, mapping = aes(x = disp, y = mpg, label = cyl), colour = \"black\", vjust = 1.5, hjust = 0.2, alpha = 0.75)
+#update an object
+p2 <- p2 +  theme(legend.position = \"bottom\") +  labs(colour = \"cyl\")
+
+ggarrange(p1, p2, ncol = 2, nrow = 1, labels = c(\"geom_text()\", \"geom_label()\"))
+```"
+"1","`geom_smooth()` using formula 'y ~ x'
+`geom_smooth()` using formula 'y ~ x'
+`geom_smooth()` using formula 'y ~ x'
+`geom_smooth()` using formula 'y ~ x'
+"

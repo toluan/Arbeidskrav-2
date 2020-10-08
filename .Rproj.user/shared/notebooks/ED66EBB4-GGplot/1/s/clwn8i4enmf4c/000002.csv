@@ -1,0 +1,7 @@
+"0","```r
+library(ggplot2)
+library(tinytex)
+library(tidyverse)
+
+ggplot(data = mtcars)
+```"

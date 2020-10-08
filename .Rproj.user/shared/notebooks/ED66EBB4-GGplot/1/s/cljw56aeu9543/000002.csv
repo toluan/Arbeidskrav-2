@@ -1,0 +1,6 @@
+"0","```r
+hist1 <- ggplot(data = mtcars, mapping = aes(mpg)) +
+  facet_wrap(~factor(cyl)) +
+  geom_histogram()
+hist1
+```"

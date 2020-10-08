@@ -1,0 +1,10 @@
+"0","```r
+bp1 <- ggplot() +
+  geom_point(data = mtcars, mapping = aes(x = hp, y = wt, size = 1609.347/(2*qsec^2)), colour = \"blue\", alpha = 0.25) +
+  geom_text(data = mtcars, mapping = aes(x = hp, y = wt, label = rownames(mtcars)), 
+            colour = \"black\", size=2, hjust = 0.5, vjust=3) +
+  labs(size = \"Average\nacceleration\") +
+  scale_size_continuous(range = c(1, 10), breaks = seq(1, 5, by=0.25)) +
+  theme_classic()
+bp1
+```"

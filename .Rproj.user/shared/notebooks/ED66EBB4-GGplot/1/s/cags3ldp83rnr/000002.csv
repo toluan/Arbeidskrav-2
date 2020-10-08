@@ -1,0 +1,4 @@
+"0","```r
+library(lattice)
+histogram(~mpg | factor(cyl),  type = \"density\", data = mtcars)
+```"

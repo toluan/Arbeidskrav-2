@@ -1,0 +1,5 @@
+"0","```r
+bp <- ggplot(data = mtcars, mapping = aes(mpg)) +
+  geom_boxplot()
+bp
+```"

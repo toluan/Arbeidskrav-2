@@ -1,0 +1,8 @@
+"0","```r
+ggplot(data = mtcars, mapping = aes(x = disp, y = mpg)) +
+  geom_point(aes(colour = factor(cyl))) +
+  geom_smooth(method = \"lm\", se = FALSE) +
+  geom_smooth(method = MASS::rlm, colour = 'Red', se = FALSE) +
+  geom_point(data = df_mean, mapping = aes(x = disp, y = mpg), colour = \"black\", size = 3) + 
+  geom_text(data = df_mean, mapping = aes(x = disp, y = mpg, label = cyl), colour = \"black\", vjust = 1.5)
+```"

@@ -1,0 +1,5 @@
+"0","```r
+    
+# am is a dummy var. 0=manual, 1=automatic
+#  facet_grid(factor(am, labels = c(\"Manual\", \"Automatic\")) ~ factor(cyl)) +
+```"

@@ -1,0 +1,6 @@
+"0","```r
+ggplot() +
+    geom_point(data = mtcars, mapping = aes(x = disp, y = mpg, colour = factor(cyl), size = 3.6*(0.25*1609.347)/qsec, shape = factor(ifelse(am, \"Aut\", \"Man\")))) +
+    labs(colour = \"cyl\", size = \"speed\n(km/h)\", shape = \"trans-\nmission\") +
+    geom_smooth(data = mtcars, mapping = aes(x = disp, y = mpg))
+```"

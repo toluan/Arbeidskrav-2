@@ -1,0 +1,6 @@
+"0","```r
+ggplot(data = mtcars, mapping = aes(x = hp, y = 1609.347/(2*qsec^2))) +
+    facet_wrap(~cut_number(wt, n =3)) +
+  geom_point(aes(colour = cut_number(wt, n = 3))) +
+  geom_smooth(method = \"lm\", se = FALSE)
+```"

@@ -1,0 +1,5 @@
+"0","```r
+ggplot() +
+    geom_point(data = mtcars, mapping = aes(x = disp, y = mpg, colour = factor(cyl), alpha = 3.6*(0.25*1609.347)/qsec, shape = factor(ifelse(am, \"Aut\", \"Man\"))), size=4) +
+    labs(colour = \"cyl\", alpha = \"speed\n(km/h)\", shape = \"trans-\nmission\")
+```"

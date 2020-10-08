@@ -1,0 +1,4 @@
+"0","```r
+ggplot() +
+    geom_point(data = mtcars, mapping = aes(x = disp, y = mpg, colour = factor(cyl), size = qsec))
+```"
