@@ -29,6 +29,12 @@ kable(summary(heights[,1:4]))
 kable(summary(heights[,5:9]))
 ```
 
+Denne summary funksjonen gir oss en oppsummering av undersøkelsen. Hvor det blir forklart hvor mange deltakere det er totalt i datasettet, hvilket kjønn, hvilken sivilstatus de har, utdannelse, hvilken score de fikk på "Armed Forces Qualification Test", og høyde. 
+
+Verdiene som kommer opp i summaryen forklarer oss forskjellige aspekter av undersøkelsen. Forklaring av de måleenhetene, brukt i summaryet: 
+"1st qu"= første kvartil, "3rd qu"= tredje kvartil, Median= median av den utvalgte variabelen, Mean = gjennomsnitt av variabelen, Min & Max = minste og maks verdi av en variabel. NA = Not available 
+
+
 ## Plot
 ```{r echo=FALSE}
 ggplot(heights, mapping =aes(x = height, y = income))+
