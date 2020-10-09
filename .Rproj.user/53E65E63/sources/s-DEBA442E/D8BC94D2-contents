@@ -34,6 +34,11 @@ Deltagelse i friidrett, skoleklubber og dating hører til sosiale aktiviteter. @
 ## Oppsummerende statistikk
 
 ```{r}
+heightsPosInc <-subset(heights, income>0)
+heightsPosInc$heightInt <-cut(heightsPosInc$height, breaks = 8)
+```
+
+```{r}
 heights$heightInt <-cut(heights$height, breaks = 8)
 kable(summary(heights[,1:4]))
 ```
@@ -51,7 +56,7 @@ Verdiene som kommer opp i summaryen forklarer oss forskjellige aspekter av under
 ## Plot1
 
 ```{r echo=FALSE}
-ggplot(heightsPosInc, mapping = aes(height))+
+ggplot(heightsPosInc, mapping = aes(height)) +
   geom_histogram(mapping = NULL,
   data = NULL,
   stat = "bin",
@@ -64,15 +69,6 @@ ggplot(heightsPosInc, mapping = aes(height))+
   inherit.aes = TRUE)
 ```
 
-Vi kan se på histogrammet at høyden er normalfordelt. 
-
-
-
-## Plot1
-
-```{r echo=FALSE}
-hist(height, main = "Høyde", xlab = "Inches", ylab = "Antall")
-```
 Vi kan se på histogrammet at høyden er normalfordelt. Dette histogrammet forklarer oss hvordan utvalget i datasettet er valgt. Faktumet bak at histogrammet er normalfordelt tyder på at det er et greit variert utvalg av individer, for at datasettet ikke skal få en tydelig bias.  
 
 ```{r}
@@ -82,7 +78,7 @@ For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten 
 
 ```{r echo=FALSE}
 heightsPosInc$logincome <- log(heightsPosInc$income)
-hist(heights$logincome, main = "Inntekt", xlab = "$", ylab = "Antall")
+hist(heightsPosInc$logincome, main = "Inntekt", xlab = "Dollar", ylab = "Antall")
 ```
 
 
@@ -93,7 +89,7 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 ```
 
 ```{r echo=FALSE}
-ggplot(heights, mapping =aes(x = height, y = income))+
+ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 
     geom_point(color = "brown3")+
     facet_grid(~ marital)
@@ -109,7 +105,6 @@ Det ble regnet et gjennomsnitt av de to øverste verdiene og gjennomsnittet ble 
 
 
 ```{r echo=FALSE}
-heightsPosInc <-subset(heights, income>0)
 ggplot(heightsPosInc, mapping =aes(x = heightInt, y = income))+
     scale_y_continuous(trans = scales::log_trans())+
     geom_boxplot()
