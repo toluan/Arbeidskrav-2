@@ -14,12 +14,27 @@ output:
 library(modelr)
 library(knitr)
 library(ggplot2)
+attach(heights)
+library(ggpubr)
+library(tidyverse)
+library(knitr)
+library(tinytex)
+library(openintro)
+library(dplyr)
+library(ggplot2)
+library(e1071)
+```
 ```
 
   
 ## Introduksjon 
 
 Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. Vi kan også lese om forskjellene som er mellom kjønn og hva det betyr for lønnen. Hvilke andre variabler er det som kan være med på å påvirke lønnen til en person. Vi skal her se på hvilken betydning høyde har for årslønnen til en person, og skal også se på andre variabler som kan ha påvirkning på dette. 
+
+Høyere arbeidstakere får betydelig høyere inntekt enn lavere arbeidstakere. 
+Hva er, egentlig, årsak til dette fenomenet? 
+Forskere er fortsatt usikkre om hvilke forhåld påvirker inntektsforskjeller mest. Noen hevder at høyere arbeidstakere har bedre kognitive evner, mens andre forskere viser til de ikke kognitive eller til de sosiale evner.
+Uansett årsakssammenheng, så er lønnsforskjellen mellom høye og mindre høye arbeidstakere ganske tydelig.
 
 ## Litteraturgjennomgang 
 For å katrlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt famillieforhold og muskelstyrke.
@@ -45,6 +60,21 @@ Denne summary funksjonen gir oss en oppsummering av undersøkelsen. Hvor det bli
 Verdiene som kommer opp i summaryen forklarer oss forskjellige aspekter av undersøkelsen. Forklaring av de måleenhetene, brukt i summaryet: 
 "1st qu"= første kvartil, "3rd qu"= tredje kvartil, Median= median av den utvalgte variabelen, Mean = gjennomsnitt av variabelen, Min & Max = minste og maks verdi av en variabel. NA = Not available 
 
+```{r echo=FALSE}
+hist(height, main = "Høyde", xlab = "Inches", ylab = "Antall")
+```
+Vi kan se på histogrammet at høyden er normalfordelt. 
+
+```{r}
+hist(income, main = "Inntekt", xlab = "$", ylab = "Antall")
+```
+For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten av observasjonene til venstre på x-aksen og det blir færre observasjoner desto lenger ut på x-aksen en kommer. 
+
+```{r}
+ggplot(heights, aes(x = income)) +
+  geom_point() +
+  scale_x_log10() 
+```
 
 ## Plot
 ```{r echo=FALSE}
@@ -71,44 +101,14 @@ Det ble regnet et gjennomsnitt av de to øverste verdiene og gjennomsnittet ble 
 ggplot(heights) + 
   geom_bar(mapping = aes(x = height))
 ```
-=======
-library(ggpubr)
-library(tidyverse)
-library(knitr)
-library(tinytex)
-```
+
 
 ```{r, echo=FALSE}
 View(heights)
 ```
 
-# Introduksjon
-
-Høyere arbeidstakere får betydelig høyere inntekt enn lavere arbeidstakere. 
-Hva er, egentlig, årsak til dette fenomenet? 
-Forskere er fortsatt usikkre om hvilke forhåld påvirker inntektsforskjeller mest. Noen hevder at høyere arbeidstakere har bedre kognitive evner, mens andre forskere viser til de ikke kognitive eller til de sosiale evner.
-Uansett årsakssammenheng, så er lønnsforskjellen mellom høye og mindre høye arbeidstakere ganske tydelig. 
-
 Her skal vi prøve å kartlegge mulige årsak, ut fra forskningslitteratur.
 
-
-# Litteratur presentasjon
-
-For å katrlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt famillieforhold og muskelstyrke.
-
-Kognitive egenskaper oppfatter mentale funksjoner som sansing, oppmerksomhet, hukommelse og logiske evner. @malt2019
-Ikke kognitive egenskaper reffererer til personlige egenskaper som viljestyrke, utholdenhet, karisma og lederegenskaper. Foreldrenes sosioøkonomiske egenskaper (inntekt, skolegang) samt familieforholdet (genetikk, verdier og normer) ble også vurdert som mulige årsak til ulikheter. @lundborg2014.
-Deltagelse i friidrett, skoleklubber og dating hører til sosiale aktiviteter. @cinnirella2009
-
-
-
-
-
-
-
-# Referanseliste
-
->>>>>>> Litteratur
 
 ```{r}
 ggplot(heights, mapping = aes(height)) +
@@ -123,7 +123,6 @@ ggplot(heights, mapping = aes(height)) +
   show.legend = NA,
   inherit.aes = TRUE)
 ```
-
 
 ```{r echo=FALSE}
 heightsPosInc <-subset(heights, income>0)
@@ -140,13 +139,12 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_smooth(method = "lm")
 ```
 
-```{r echo=FALSE}
+```{r}
 heightsPosInc <-subset(heights, income>0)
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(position = "jitter")+
     geom_smooth(method = MASS::rlm, se = FALSE)
 ```
-
 
 ```{r echo=FALSE}
 summary(lm(income~height, data = heights))
