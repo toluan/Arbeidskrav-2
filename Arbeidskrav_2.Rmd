@@ -70,9 +70,6 @@ Vi kan se på histogrammet at høyden er normalfordelt.
 
 ## Plot1
 
-```{r echo=FALSE}
-hist(height, main = "Høyde", xlab = "Inches", ylab = "Antall")
-```
 Vi kan se på histogrammet at høyden er normalfordelt. Dette histogrammet forklarer oss hvordan utvalget i datasettet er valgt. Faktumet bak at histogrammet er normalfordelt tyder på at det er et greit variert utvalg av individer, for at datasettet ikke skal få en tydelig bias.  
 
 ```{r}
@@ -92,11 +89,8 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")
 ```
 
- 
-
-
 ```{r echo=FALSE}
-ggplot(heights, mapping =aes(x = height, y = income))+
+ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 
     geom_point(color = "brown3")+
     facet_grid(~ marital)
