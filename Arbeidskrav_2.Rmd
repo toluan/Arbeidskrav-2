@@ -87,7 +87,7 @@ heights$logincome <- log(heights$income)
 hist(heights$logincome, main = "Inntekt", xlab = "$", ylab = "Antall")
 ```
 
-Majoriteten av alle observasjonene ligger i mellom 60-75 inches, og det er kun et lite antall som er utenfor dette. Det kan dermed se ut som at variablene ikke er særlig normalfordelt, men at "et eller annet".
+Majoriteten av alle observasjonene ligger i mellom 60-75 inches, og det er kun et lite antall som er utenfor dette. Det kan dermed se ut som at variablene ikke er særlig normalfordelt, men at "et eller annet"..
 
 
 ## Plot2
