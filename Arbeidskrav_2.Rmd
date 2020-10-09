@@ -81,7 +81,7 @@ For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten 
 heightsPosInc$logincome <- log(heightsPosInc$income)
 hist(heightsPosInc$logincome, main = "Inntekt", xlab = "Dollar", ylab = "Antall")
 ```
-
+Logaritmen som har foretatt en transformasjon, noe som fører til at grafen har blitt tilnærmet normalfordelt med noen "outliers". 
 
 ## Plot2
 ```{r echo=FALSE}
