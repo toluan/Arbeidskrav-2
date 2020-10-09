@@ -1,23 +1,17 @@
 ---
-title: 
-#bibliography: Mitt_bibliotek_arb.krav_to.bib
-output: 
+title: "Hei"
+output:
   html_document:
     df_print: paged
-  html_notebook:
-    df_print: paged
-  word_document: default
-  pdf_document: default
 ---
+
 ```{r set up, echo=FALSE, include=FALSE}
 library(modelr)
 library(knitr)
 library(ggplot2)
-attach(heights)
 library(ggpubr)
 library(tidyverse)
 library(tinytex)
-```
 ```
 
 ## Introduksjon 
@@ -52,9 +46,12 @@ Denne summary funksjonen gir oss en oppsummering av undersøkelsen. Hvor det bli
 
 Verdiene som kommer opp i summaryen forklarer oss forskjellige aspekter av undersøkelsen. Forklaring av de måleenhetene, brukt i summaryet: 
 "1st qu"= første kvartil, "3rd qu"= tredje kvartil, Median= median av den utvalgte variabelen, Mean = gjennomsnitt av variabelen, Min & Max = minste og maks verdi av en variabel. NA = Not available 
+`
 
-```{r}
-ggplot(heights, mapping = aes(height)) +
+## Plot1
+
+```{r echo=FALSE}
+ggplot(heightsPosInc, mapping = aes(height))+
   geom_histogram(mapping = NULL,
   data = NULL,
   stat = "bin",
@@ -66,57 +63,38 @@ ggplot(heights, mapping = aes(height)) +
   show.legend = NA,
   inherit.aes = TRUE)
 ```
-
-```
-
-
-## Plot1
-
-```{r echo=FALSE}
-hist(height, main = "Høyde", xlab = "Inches", ylab = "Antall")
-```
 Vi kan se på histogrammet at høyden er normalfordelt. 
 
 ```{r}
-hist(income, main = "Inntekt", xlab = "$", ylab = "Antall")
+hist(heightsPosInc$income, main = "Inntekt", xlab = "$", ylab = "Antall")
 ```
-For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten av observasjonene til venstre på x-aksen og det blir færre observasjoner desto lenger ut på x-aksen en kommer. 
+For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten av observasjonene til venstre på x-aksen og det blir færre observasjoner desto lenger ut på x-aksen en kommer. Vi gjør dermed om inntekten til logaritmer slik at vi får et nytt histogram. Der får vi at inntekten er normalfordelt. 
 
-```{r}
-heights$logincome <- log(heights$income)
+```{r echo=FALSE}
+heightsPosInc$logincome <- log(heightsPosInc$income)
 hist(heights$logincome, main = "Inntekt", xlab = "$", ylab = "Antall")
 ```
-
-Majoriteten av alle observasjonene ligger i mellom 60-75 inches, og det er kun et lite antall som er utenfor dette. Det kan dermed se ut som at variablene ikke er særlig normalfordelt, men at "et eller annet".
 
 
 ## Plot2
 ```{r echo=FALSE}
-ggplot(heights, mapping =aes(x = height, y = income))+
+ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")
 ```
 
-```{r echo=FALSE}
-ggplot(heights, mapping =aes(x = height, y = income))+
+```{r, echo=FALSE}
+ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")+
     facet_grid(~ marital)
 ```
 
 ```{r echo=FALSE}
-ggplot(heights, mapping =aes(x = height, y = income))+
+ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")+
     facet_grid(~ sex)
 ```
 
 Det ble regnet et gjennomsnitt av de to øverste verdiene og gjennomsnittet ble brukt til å erstatte alle verdiene i øverste siktet. Dette er sikkert personen som tjener langt over hva som er normalt å tjene. 
-
-```{r}
-ggplot(heights) + 
-  geom_bar(mapping = aes(x = height))
-```
-
-
-Her skal vi prøve å kartlegge mulige årsak, ut fra forskningslitteratur.
 
 
 ```{r echo=FALSE}
