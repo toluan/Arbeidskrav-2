@@ -1763,28 +1763,99 @@ summary {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
-<div id="introduksjon" class="section level2">
-<h2>Introduksjon</h2>
-<p>Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. Vi kan også lese om forskjellene som er mellom kjønn og hva det betyr for lønnen. Hvilke andre variabler er det som kan være med på å påvirke lønnen til en person. Vi skal her se på hvilken betydning høyde har for årslønnen til en person, og skal også se på andre variabler som kan ha påvirkning på dette.</p>
-</div>
-<div id="litteraturgjennomgang" class="section level2">
-<h2>Litteraturgjennomgang</h2>
-<p>For å katrlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt famillieforhold og muskelstyrke.</p>
-<p>Kognitive egenskaper oppfatter mentale funksjoner som sansing, oppmerksomhet, hukommelse og logiske evner. <span class="citation">@malt2019</span> Ikke kognitive egenskaper refererer til personlige egenskaper som viljestyrke, utholdenhet, karisma og lederegenskaper. Foreldrenes sosioøkonomiske egenskaper (inntekt, skolegang) samt familieforholdet (genetikk, verdier og normer) ble også vurdert som mulige årsak til ulikheter. <span class="citation">@lundborg2014</span>. Deltagelse i friidrett, skoleklubber og dating hører til sosiale aktiviteter. <span class="citation">@cinnirella2009</span></p>
-</div>
-<div id="oppsummerende-statistikk" class="section level2">
-<h2>Oppsummerende statistikk</h2>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
+<pre><code>
+  
+## Introduksjon 
+
+Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. Vi kan også lese om forskjellene som er mellom kjønn og hva det betyr for lønnen. Hvilke andre variabler er det som kan være med på å påvirke lønnen til en person. Vi skal her se på hvilken betydning høyde har for årslønnen til en person, og skal også se på andre variabler som kan ha påvirkning på dette. 
+
+Høyere arbeidstakere får betydelig høyere inntekt enn lavere arbeidstakere. 
+Hva er, egentlig, årsak til dette fenomenet? 
+Forskere er fortsatt usikkre om hvilke forhåld påvirker inntektsforskjeller mest. Noen hevder at høyere arbeidstakere har bedre kognitive evner, mens andre forskere viser til de ikke kognitive eller til de sosiale evner.
+Uansett årsakssammenheng, så er lønnsforskjellen mellom høye og mindre høye arbeidstakere ganske tydelig.
+
+## Litteraturgjennomgang 
+For å katrlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt famillieforhold og muskelstyrke.
+
+Kognitive egenskaper oppfatter mentale funksjoner som sansing, oppmerksomhet, hukommelse og logiske evner. @malt2019
+Ikke kognitive egenskaper refererer til personlige egenskaper som viljestyrke, utholdenhet, karisma og lederegenskaper. Foreldrenes sosioøkonomiske egenskaper (inntekt, skolegang) samt familieforholdet (genetikk, verdier og normer) ble også vurdert som mulige årsak til ulikheter. @lundborg2014.
+Deltagelse i friidrett, skoleklubber og dating hører til sosiale aktiviteter. @cinnirella2009
+ 
+ 
+## Oppsummerende statistikk
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Denne summary funksjonen gir oss en oppsummering av undersøkelsen. Hvor det blir forklart hvor mange deltakere det er totalt i datasettet, hvilket kjønn, hvilken sivilstatus de har, utdannelse, hvilken score de fikk på &quot;Armed Forces Qualification Test&quot;, og høyde. 
+
+Verdiene som kommer opp i summaryen forklarer oss forskjellige aspekter av undersøkelsen. Forklaring av de måleenhetene, brukt i summaryet: 
+&quot;1st qu&quot;= første kvartil, &quot;3rd qu&quot;= tredje kvartil, Median= median av den utvalgte variabelen, Mean = gjennomsnitt av variabelen, Min &amp; Max = minste og maks verdi av en variabel. NA = Not available 
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+Vi kan se på histogrammet at høyden er normalfordelt. 
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGlzdChpbmNvbWUsIG1haW4gPSBcIklubnRla3RcIiwgeGxhYiA9IFwiJFwiLCB5bGFiID0gXCJBbnRhbGxcIilcbmBgYCJ9 --&gt;
+
+```r
+hist(income, main = &quot;Inntekt&quot;, xlab = &quot;$&quot;, ylab = &quot;Antall&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten av observasjonene til venstre på x-aksen og det blir færre observasjoner desto lenger ut på x-aksen en kommer.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGhlaWdodHMsIGFlcyh4ID0gaW5jb21lKSkgK1xuICBnZW9tX3BvaW50KCkgK1xuICBzY2FsZV94X2xvZzEwKCkgXG5gYGAifQ== -->
+<pre class="r"><code>ggplot(heights, aes(x = income)) +
+  geom_point() +
+  scale_x_log10() </code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Denne summary funksjonen gir oss en oppsummering av undersøkelsen. Hvor det blir forklart hvor mange deltakere det er totalt i datasettet, hvilket kjønn, hvilken sivilstatus de har, utdannelse, hvilken score de fikk på “Armed Forces Qualification Test”, og høyde.</p>
-<p>Verdiene som kommer opp i summaryen forklarer oss forskjellige aspekter av undersøkelsen. Forklaring av de måleenhetene, brukt i summaryet: “1st qu”= første kvartil, “3rd qu”= tredje kvartil, Median= median av den utvalgte variabelen, Mean = gjennomsnitt av variabelen, Min &amp; Max = minste og maks verdi av en variabel. NA = Not available</p>
-</div>
 <div id="plot" class="section level2">
 <h2>Plot</h2>
 <!-- rnb-text-end -->
@@ -1807,61 +1878,15 @@ summary {
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>======= library(ggpubr) library(tidyverse) library(knitr) library(tinytex)</p>
-<pre><code>
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-# Introduksjon
-
-Høyere arbeidstakere får betydelig høyere inntekt enn lavere arbeidstakere. 
-Hva er, egentlig, årsak til dette fenomenet? 
-Forskere er fortsatt usikkre om hvilke forhåld påvirker inntektsforskjeller mest. Noen hevder at høyere arbeidstakere har bedre kognitive evner, mens andre forskere viser til de ikke kognitive eller til de sosiale evner.
-Uansett årsakssammenheng, så er lønnsforskjellen mellom høye og mindre høye arbeidstakere ganske tydelig. 
-
-Her skal vi prøve å kartlegge mulige årsak, ut fra forskningslitteratur.
-
-
-# Litteratur presentasjon
-
-For å katrlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt famillieforhold og muskelstyrke.
-
-Kognitive egenskaper oppfatter mentale funksjoner som sansing, oppmerksomhet, hukommelse og logiske evner. @malt2019
-Ikke kognitive egenskaper reffererer til personlige egenskaper som viljestyrke, utholdenhet, karisma og lederegenskaper. Foreldrenes sosioøkonomiske egenskaper (inntekt, skolegang) samt familieforholdet (genetikk, verdier og normer) ble også vurdert som mulige årsak til ulikheter. @lundborg2014.
-Deltagelse i friidrett, skoleklubber og dating hører til sosiale aktiviteter. @cinnirella2009
-
-
-
-
-
-
-
-# Referanseliste
-
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; Litteratur
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGhlaWdodHMsIG1hcHBpbmcgPSBhZXMoaGVpZ2h0KSkgK1xuICBnZW9tX2hpc3RvZ3JhbShtYXBwaW5nID0gTlVMTCxcbiAgZGF0YSA9IE5VTEwsXG4gIHN0YXQgPSBcImJpblwiLFxuICBwb3NpdGlvbiA9IFwic3RhY2tcIixcbiAgYmlud2lkdGggPSAwLjUsXG4gIGJpbnMgPSAzMCxcbiAgbmEucm0gPSBGQUxTRSxcbiAgb3JpZW50YXRpb24gPSBOQSxcbiAgc2hvdy5sZWdlbmQgPSBOQSxcbiAgaW5oZXJpdC5hZXMgPSBUUlVFKVxuYGBgIn0= --&gt;
-
-```r
-ggplot(heights, mapping = aes(height)) +
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Her skal vi prøve å kartlegge mulige årsak, ut fra forskningslitteratur.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGhlaWdodHMsIG1hcHBpbmcgPSBhZXMoaGVpZ2h0KSkgK1xuICBnZW9tX2hpc3RvZ3JhbShtYXBwaW5nID0gTlVMTCxcbiAgZGF0YSA9IE5VTEwsXG4gIHN0YXQgPSBcImJpblwiLFxuICBwb3NpdGlvbiA9IFwic3RhY2tcIixcbiAgYmlud2lkdGggPSAwLjUsXG4gIGJpbnMgPSAzMCxcbiAgbmEucm0gPSBGQUxTRSxcbiAgb3JpZW50YXRpb24gPSBOQSxcbiAgc2hvdy5sZWdlbmQgPSBOQSxcbiAgaW5oZXJpdC5hZXMgPSBUUlVFKVxuYGBgIn0= -->
+<pre class="r"><code>ggplot(heights, mapping = aes(height)) +
   geom_histogram(mapping = NULL,
   data = NULL,
   stat = &quot;bin&quot;,
@@ -1885,6 +1910,12 @@ ggplot(heights, mapping = aes(height)) +
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVpZ2h0c1Bvc0luYyA8LXN1YnNldChoZWlnaHRzLCBpbmNvbWU+MClcbmdncGxvdChoZWlnaHRzUG9zSW5jLCBtYXBwaW5nID1hZXMoeCA9IGhlaWdodCwgeSA9IGluY29tZSkpK1xuICAgIGdlb21fcG9pbnQocG9zaXRpb24gPSBcImppdHRlclwiKStcbiAgICBnZW9tX3Ntb290aChtZXRob2QgPSBNQVNTOjpybG0sIHNlID0gRkFMU0UpXG5gYGAifQ== -->
+<pre class="r"><code>heightsPosInc &lt;-subset(heights, income&gt;0)
+ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
+    geom_point(position = &quot;jitter&quot;)+
+    geom_smooth(method = MASS::rlm, se = FALSE)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1897,7 +1928,7 @@ ggplot(heights, mapping = aes(height)) +
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogDQojYmlibGlvZ3JhcGh5OiBNaXR0X2JpYmxpb3Rla19hcmIua3Jhdl90by5iaWINCm91dHB1dDogDQogIGh0bWxfZG9jdW1lbnQ6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogIGh0bWxfbm90ZWJvb2s6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogIHdvcmRfZG9jdW1lbnQ6IGRlZmF1bHQNCiAgcGRmX2RvY3VtZW50OiBkZWZhdWx0DQotLS0NCiAgDQpgYGB7ciBzZXQgdXAsIGVjaG89RkFMU0UsIGluY2x1ZGU9RkFMU0V9DQpsaWJyYXJ5KG1vZGVscikNCmxpYnJhcnkoa25pdHIpDQpsaWJyYXJ5KGdncGxvdDIpDQpgYGANCg0KICANCiMjIEludHJvZHVrc2pvbiANCg0KSHZhIHVsaWtlIHBlcnNvbmVyIHRqZW5lciBvZyBodmlsa2UgeXJrZXIgc29tIHRqZW5lciBtZXN0IGVyIG5vZSB2aSBrYW4gbGVzZSBvbSBodmVyIGVuZXN0ZSBkYWcuIFZpIGthbiBvZ3PDpSBsZXNlIG9tIGZvcnNramVsbGVuZSBzb20gZXIgbWVsbG9tIGtqw7hubiBvZyBodmEgZGV0IGJldHlyIGZvciBsw7hubmVuLiBIdmlsa2UgYW5kcmUgdmFyaWFibGVyIGVyIGRldCBzb20ga2FuIHbDpnJlIG1lZCBww6Ugw6UgcMOldmlya2UgbMO4bm5lbiB0aWwgZW4gcGVyc29uLiBWaSBza2FsIGhlciBzZSBww6UgaHZpbGtlbiBiZXR5ZG5pbmcgaMO4eWRlIGhhciBmb3Igw6Vyc2zDuG5uZW4gdGlsIGVuIHBlcnNvbiwgb2cgc2thbCBvZ3PDpSBzZSBww6UgYW5kcmUgdmFyaWFibGVyIHNvbSBrYW4gaGEgcMOldmlya25pbmcgcMOlIGRldHRlLiANCg0KIyMgTGl0dGVyYXR1cmdqZW5ub21nYW5nIA0KRm9yIMOlIGthdHJsZWdnZSDDpXJzYWsgdGlsIGzDuG5uc2ZvcnNramVsbGVyIG1lbGxvbSBow7h5ZSBvZyBtaW5kcmUgaMO4eWUgYXJiZWlkc3Rha2VyZSwgaGFyIGZvcnNrZXJuZSBzZXR0IHDDpSBkZSBrb2duaXRpdmUsIGRlIGlra2Uga29nbml0aXZlLCBkZSBzb3NpYWxlIGVnZW5za2FwZXIsIHNhbXQgZmFtaWxsaWVmb3Job2xkIG9nIG11c2tlbHN0eXJrZS4NCg0KS29nbml0aXZlIGVnZW5za2FwZXIgb3BwZmF0dGVyIG1lbnRhbGUgZnVua3Nqb25lciBzb20gc2Fuc2luZywgb3BwbWVya3NvbWhldCwgaHVrb21tZWxzZSBvZyBsb2dpc2tlIGV2bmVyLiBAbWFsdDIwMTkNCklra2Uga29nbml0aXZlIGVnZW5za2FwZXIgcmVmZXJlcmVyIHRpbCBwZXJzb25saWdlIGVnZW5za2FwZXIgc29tIHZpbGplc3R5cmtlLCB1dGhvbGRlbmhldCwga2FyaXNtYSBvZyBsZWRlcmVnZW5za2FwZXIuIEZvcmVsZHJlbmVzIHNvc2lvw7hrb25vbWlza2UgZWdlbnNrYXBlciAoaW5udGVrdCwgc2tvbGVnYW5nKSBzYW10IGZhbWlsaWVmb3Job2xkZXQgKGdlbmV0aWtrLCB2ZXJkaWVyIG9nIG5vcm1lcikgYmxlIG9nc8OlIHZ1cmRlcnQgc29tIG11bGlnZSDDpXJzYWsgdGlsIHVsaWtoZXRlci4gQGx1bmRib3JnMjAxNC4NCkRlbHRhZ2Vsc2UgaSBmcmlpZHJldHQsIHNrb2xla2x1YmJlciBvZyBkYXRpbmcgaMO4cmVyIHRpbCBzb3NpYWxlIGFrdGl2aXRldGVyLiBAY2lubmlyZWxsYTIwMDkNCiANCiANCiMjIE9wcHN1bW1lcmVuZGUgc3RhdGlzdGlraw0KDQpgYGB7ciBlY2hvPUZBTFNFfQ0KaGVpZ2h0cyRoZWlnaHRJbnQgPC1jdXQoaGVpZ2h0cyRoZWlnaHQsIGJyZWFrcyA9IDgpDQprYWJsZShzdW1tYXJ5KGhlaWdodHNbLDE6NF0pKQ0KYGBgDQoNCmBgYHtyIGVjaG89RkFMU0V9DQprYWJsZShzdW1tYXJ5KGhlaWdodHNbLDU6OV0pKQ0KYGBgDQoNCkRlbm5lIHN1bW1hcnkgZnVua3Nqb25lbiBnaXIgb3NzIGVuIG9wcHN1bW1lcmluZyBhdiB1bmRlcnPDuGtlbHNlbi4gSHZvciBkZXQgYmxpciBmb3JrbGFydCBodm9yIG1hbmdlIGRlbHRha2VyZSBkZXQgZXIgdG90YWx0IGkgZGF0YXNldHRldCwgaHZpbGtldCBrasO4bm4sIGh2aWxrZW4gc2l2aWxzdGF0dXMgZGUgaGFyLCB1dGRhbm5lbHNlLCBodmlsa2VuIHNjb3JlIGRlIGZpa2sgcMOlICJBcm1lZCBGb3JjZXMgUXVhbGlmaWNhdGlvbiBUZXN0Iiwgb2cgaMO4eWRlLiANCg0KVmVyZGllbmUgc29tIGtvbW1lciBvcHAgaSBzdW1tYXJ5ZW4gZm9ya2xhcmVyIG9zcyBmb3Jza2plbGxpZ2UgYXNwZWt0ZXIgYXYgdW5kZXJzw7hrZWxzZW4uIEZvcmtsYXJpbmcgYXYgZGUgbcOlbGVlbmhldGVuZSwgYnJ1a3QgaSBzdW1tYXJ5ZXQ6IA0KIjFzdCBxdSI9IGbDuHJzdGUga3ZhcnRpbCwgIjNyZCBxdSI9IHRyZWRqZSBrdmFydGlsLCBNZWRpYW49IG1lZGlhbiBhdiBkZW4gdXR2YWxndGUgdmFyaWFiZWxlbiwgTWVhbiA9IGdqZW5ub21zbml0dCBhdiB2YXJpYWJlbGVuLCBNaW4gJiBNYXggPSBtaW5zdGUgb2cgbWFrcyB2ZXJkaSBhdiBlbiB2YXJpYWJlbC4gTkEgPSBOb3QgYXZhaWxhYmxlIA0KDQoNCiMjIFBsb3QNCmBgYHtyIGVjaG89RkFMU0V9DQpnZ3Bsb3QoaGVpZ2h0cywgbWFwcGluZyA9YWVzKHggPSBoZWlnaHQsIHkgPSBpbmNvbWUpKSsNCiAgICBnZW9tX3BvaW50KGNvbG9yID0gImJyb3duMyIpDQpgYGANCmBgYHtyIGVjaG89RkFMU0V9DQpnZ3Bsb3QoaGVpZ2h0cywgbWFwcGluZyA9YWVzKHggPSBoZWlnaHQsIHkgPSBpbmNvbWUpKSsNCiAgICBnZW9tX3BvaW50KGNvbG9yID0gImJyb3duMyIpKw0KICAgIGZhY2V0X2dyaWQofiBtYXJpdGFsKQ0KYGBgDQoNCk1ham9yaXRldGVuIGF2IGFsbGUgb2JzZXJ2YXNqb25lbmUgbGlnZ2VyIGkgbWVsbG9tIDYwLTc1IGluY2hlcywgb2cgZGV0IGVyIGt1biBldCBsaXRlIGFudGFsbCBzb20gZXIgdXRlbmZvciBkZXR0ZS4gRGV0IGthbiBkZXJtZWQgc2UgdXQgc29tIGF0IHZhcmlhYmxlbmUgaWtrZSBlciBzw6ZybGlnIG5vcm1hbGZvcmRlbHQsIG1lbiBhdCAiZXQgZWxsZXIgYW5uZXQiLg0KIA0KYGBge3IgZWNobz1GQUxTRX0NCmdncGxvdChoZWlnaHRzLCBtYXBwaW5nID1hZXMoeCA9IGhlaWdodCwgeSA9IGluY29tZSkpKw0KICAgIGdlb21fcG9pbnQoY29sb3IgPSAiYnJvd24zIikrDQogICAgZmFjZXRfZ3JpZCh+IHNleCkNCmBgYA0KDQpEZXQgYmxlIHJlZ25ldCBldCBnamVubm9tc25pdHQgYXYgZGUgdG8gw7h2ZXJzdGUgdmVyZGllbmUgb2cgZ2plbm5vbXNuaXR0ZXQgYmxlIGJydWt0IHRpbCDDpSBlcnN0YXR0ZSBhbGxlIHZlcmRpZW5lIGkgw7h2ZXJzdGUgc2lrdGV0LiBEZXR0ZSBlciBzaWtrZXJ0IHBlcnNvbmVuIHNvbSB0amVuZXIgbGFuZ3Qgb3ZlciBodmEgc29tIGVyIG5vcm1hbHQgw6UgdGplbmUuIA0KDQpgYGB7cn0NCmdncGxvdChoZWlnaHRzKSArIA0KICBnZW9tX2JhcihtYXBwaW5nID0gYWVzKHggPSBoZWlnaHQpKQ0KYGBgDQo9PT09PT09DQpsaWJyYXJ5KGdncHVicikNCmxpYnJhcnkodGlkeXZlcnNlKQ0KbGlicmFyeShrbml0cikNCmxpYnJhcnkodGlueXRleCkNCmBgYA0KDQpgYGB7ciwgZWNobz1GQUxTRX0NClZpZXcoaGVpZ2h0cykNCmBgYA0KDQojIEludHJvZHVrc2pvbg0KDQpIw7h5ZXJlIGFyYmVpZHN0YWtlcmUgZsOlciBiZXR5ZGVsaWcgaMO4eWVyZSBpbm50ZWt0IGVubiBsYXZlcmUgYXJiZWlkc3Rha2VyZS4gDQpIdmEgZXIsIGVnZW50bGlnLCDDpXJzYWsgdGlsIGRldHRlIGZlbm9tZW5ldD8gDQpGb3Jza2VyZSBlciBmb3J0c2F0dCB1c2lra3JlIG9tIGh2aWxrZSBmb3Jow6VsZCBww6V2aXJrZXIgaW5udGVrdHNmb3Jza2plbGxlciBtZXN0LiBOb2VuIGhldmRlciBhdCBow7h5ZXJlIGFyYmVpZHN0YWtlcmUgaGFyIGJlZHJlIGtvZ25pdGl2ZSBldm5lciwgbWVucyBhbmRyZSBmb3Jza2VyZSB2aXNlciB0aWwgZGUgaWtrZSBrb2duaXRpdmUgZWxsZXIgdGlsIGRlIHNvc2lhbGUgZXZuZXIuDQpVYW5zZXR0IMOlcnNha3NzYW1tZW5oZW5nLCBzw6UgZXIgbMO4bm5zZm9yc2tqZWxsZW4gbWVsbG9tIGjDuHllIG9nIG1pbmRyZSBow7h5ZSBhcmJlaWRzdGFrZXJlIGdhbnNrZSB0eWRlbGlnLiANCg0KSGVyIHNrYWwgdmkgcHLDuHZlIMOlIGthcnRsZWdnZSBtdWxpZ2Ugw6Vyc2FrLCB1dCBmcmEgZm9yc2tuaW5nc2xpdHRlcmF0dXIuDQoNCg0KIyBMaXR0ZXJhdHVyIHByZXNlbnRhc2pvbg0KDQpGb3Igw6Uga2F0cmxlZ2dlIMOlcnNhayB0aWwgbMO4bm5zZm9yc2tqZWxsZXIgbWVsbG9tIGjDuHllIG9nIG1pbmRyZSBow7h5ZSBhcmJlaWRzdGFrZXJlLCBoYXIgZm9yc2tlcm5lIHNldHQgcMOlIGRlIGtvZ25pdGl2ZSwgZGUgaWtrZSBrb2duaXRpdmUsIGRlIHNvc2lhbGUgZWdlbnNrYXBlciwgc2FtdCBmYW1pbGxpZWZvcmhvbGQgb2cgbXVza2Vsc3R5cmtlLg0KDQpLb2duaXRpdmUgZWdlbnNrYXBlciBvcHBmYXR0ZXIgbWVudGFsZSBmdW5rc2pvbmVyIHNvbSBzYW5zaW5nLCBvcHBtZXJrc29taGV0LCBodWtvbW1lbHNlIG9nIGxvZ2lza2UgZXZuZXIuIEBtYWx0MjAxOQ0KSWtrZSBrb2duaXRpdmUgZWdlbnNrYXBlciByZWZmZXJlcmVyIHRpbCBwZXJzb25saWdlIGVnZW5za2FwZXIgc29tIHZpbGplc3R5cmtlLCB1dGhvbGRlbmhldCwga2FyaXNtYSBvZyBsZWRlcmVnZW5za2FwZXIuIEZvcmVsZHJlbmVzIHNvc2lvw7hrb25vbWlza2UgZWdlbnNrYXBlciAoaW5udGVrdCwgc2tvbGVnYW5nKSBzYW10IGZhbWlsaWVmb3Job2xkZXQgKGdlbmV0aWtrLCB2ZXJkaWVyIG9nIG5vcm1lcikgYmxlIG9nc8OlIHZ1cmRlcnQgc29tIG11bGlnZSDDpXJzYWsgdGlsIHVsaWtoZXRlci4gQGx1bmRib3JnMjAxNC4NCkRlbHRhZ2Vsc2UgaSBmcmlpZHJldHQsIHNrb2xla2x1YmJlciBvZyBkYXRpbmcgaMO4cmVyIHRpbCBzb3NpYWxlIGFrdGl2aXRldGVyLiBAY2lubmlyZWxsYTIwMDkNCg0KDQoNCg0KDQoNCg0KIyBSZWZlcmFuc2VsaXN0ZQ0KDQo+Pj4+Pj4+IExpdHRlcmF0dXINCg0KYGBge3J9DQpnZ3Bsb3QoaGVpZ2h0cywgbWFwcGluZyA9IGFlcyhoZWlnaHQpKSArDQogIGdlb21faGlzdG9ncmFtKG1hcHBpbmcgPSBOVUxMLA0KICBkYXRhID0gTlVMTCwNCiAgc3RhdCA9ICJiaW4iLA0KICBwb3NpdGlvbiA9ICJzdGFjayIsDQogIGJpbndpZHRoID0gMC41LA0KICBiaW5zID0gMzAsDQogIG5hLnJtID0gRkFMU0UsDQogIG9yaWVudGF0aW9uID0gTkEsDQogIHNob3cubGVnZW5kID0gTkEsDQogIGluaGVyaXQuYWVzID0gVFJVRSkNCmBgYA0KDQoNCmBgYHtyIGVjaG89RkFMU0V9DQpoZWlnaHRzUG9zSW5jIDwtc3Vic2V0KGhlaWdodHMsIGluY29tZT4wKQ0KZ2dwbG90KGhlaWdodHNQb3NJbmMsIG1hcHBpbmcgPWFlcyh4ID0gaGVpZ2h0SW50LCB5ID0gaW5jb21lKSkrDQogICAgc2NhbGVfeV9jb250aW51b3VzKHRyYW5zID0gc2NhbGVzOjpsb2dfdHJhbnMoKSkrDQogICAgZ2VvbV9ib3hwbG90KCkNCmBgYA0KDQpgYGB7ciBlY2hvPUZBTFNFfQ0KaGVpZ2h0c1Bvc0luYyA8LXN1YnNldChoZWlnaHRzLCBpbmNvbWU+MCkNCmdncGxvdChoZWlnaHRzUG9zSW5jLCBtYXBwaW5nID1hZXMoeCA9IGhlaWdodCwgeSA9IGluY29tZSkpKw0KICAgIHNjYWxlX3lfY29udGludW91cyh0cmFucyA9IHNjYWxlczo6bG9nX3RyYW5zKCkpKw0KICAgIGdlb21fcG9pbnQocG9zaXRpb24gPSAiaml0dGVyIikrDQogICAgZ2VvbV9zbW9vdGgobWV0aG9kID0gImxtIikNCmBgYA0KDQpgYGB7ciBlY2hvPUZBTFNFfQ0KaGVpZ2h0c1Bvc0luYyA8LXN1YnNldChoZWlnaHRzLCBpbmNvbWU+MCkNCmdncGxvdChoZWlnaHRzUG9zSW5jLCBtYXBwaW5nID1hZXMoeCA9IGhlaWdodCwgeSA9IGluY29tZSkpKw0KICAgIGdlb21fcG9pbnQocG9zaXRpb24gPSAiaml0dGVyIikrDQogICAgZ2VvbV9zbW9vdGgobWV0aG9kID0gTUFTUzo6cmxtLCBzZSA9IEZBTFNFKQ0KYGBgDQoNCg0KYGBge3IgZWNobz1GQUxTRX0NCnN1bW1hcnkobG0oaW5jb21lfmhlaWdodCwgZGF0YSA9IGhlaWdodHMpKQ0KYGBgDQogDQojIyBLb25rbHVzam9uDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogDQojYmlibGlvZ3JhcGh5OiBNaXR0X2JpYmxpb3Rla19hcmIua3Jhdl90by5iaWINCm91dHB1dDogDQogIGh0bWxfZG9jdW1lbnQ6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogIGh0bWxfbm90ZWJvb2s6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogIHdvcmRfZG9jdW1lbnQ6IGRlZmF1bHQNCiAgcGRmX2RvY3VtZW50OiBkZWZhdWx0DQotLS0NCiAgDQpgYGB7ciBzZXQgdXAsIGVjaG89RkFMU0UsIGluY2x1ZGU9RkFMU0V9DQpsaWJyYXJ5KG1vZGVscikNCmxpYnJhcnkoa25pdHIpDQpsaWJyYXJ5KGdncGxvdDIpDQphdHRhY2goaGVpZ2h0cykNCmxpYnJhcnkoZ2dwdWJyKQ0KbGlicmFyeSh0aWR5dmVyc2UpDQpsaWJyYXJ5KGtuaXRyKQ0KbGlicmFyeSh0aW55dGV4KQ0KbGlicmFyeShvcGVuaW50cm8pDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShlMTA3MSkNCmBgYA0KYGBgDQoNCiAgDQojIyBJbnRyb2R1a3Nqb24gDQoNCkh2YSB1bGlrZSBwZXJzb25lciB0amVuZXIgb2cgaHZpbGtlIHlya2VyIHNvbSB0amVuZXIgbWVzdCBlciBub2Ugdmkga2FuIGxlc2Ugb20gaHZlciBlbmVzdGUgZGFnLiBWaSBrYW4gb2dzw6UgbGVzZSBvbSBmb3Jza2plbGxlbmUgc29tIGVyIG1lbGxvbSBrasO4bm4gb2cgaHZhIGRldCBiZXR5ciBmb3IgbMO4bm5lbi4gSHZpbGtlIGFuZHJlIHZhcmlhYmxlciBlciBkZXQgc29tIGthbiB2w6ZyZSBtZWQgcMOlIMOlIHDDpXZpcmtlIGzDuG5uZW4gdGlsIGVuIHBlcnNvbi4gVmkgc2thbCBoZXIgc2UgcMOlIGh2aWxrZW4gYmV0eWRuaW5nIGjDuHlkZSBoYXIgZm9yIMOlcnNsw7hubmVuIHRpbCBlbiBwZXJzb24sIG9nIHNrYWwgb2dzw6Ugc2UgcMOlIGFuZHJlIHZhcmlhYmxlciBzb20ga2FuIGhhIHDDpXZpcmtuaW5nIHDDpSBkZXR0ZS4gDQoNCkjDuHllcmUgYXJiZWlkc3Rha2VyZSBmw6VyIGJldHlkZWxpZyBow7h5ZXJlIGlubnRla3QgZW5uIGxhdmVyZSBhcmJlaWRzdGFrZXJlLiANCkh2YSBlciwgZWdlbnRsaWcsIMOlcnNhayB0aWwgZGV0dGUgZmVub21lbmV0PyANCkZvcnNrZXJlIGVyIGZvcnRzYXR0IHVzaWtrcmUgb20gaHZpbGtlIGZvcmjDpWxkIHDDpXZpcmtlciBpbm50ZWt0c2ZvcnNramVsbGVyIG1lc3QuIE5vZW4gaGV2ZGVyIGF0IGjDuHllcmUgYXJiZWlkc3Rha2VyZSBoYXIgYmVkcmUga29nbml0aXZlIGV2bmVyLCBtZW5zIGFuZHJlIGZvcnNrZXJlIHZpc2VyIHRpbCBkZSBpa2tlIGtvZ25pdGl2ZSBlbGxlciB0aWwgZGUgc29zaWFsZSBldm5lci4NClVhbnNldHQgw6Vyc2Frc3NhbW1lbmhlbmcsIHPDpSBlciBsw7hubnNmb3Jza2plbGxlbiBtZWxsb20gaMO4eWUgb2cgbWluZHJlIGjDuHllIGFyYmVpZHN0YWtlcmUgZ2Fuc2tlIHR5ZGVsaWcuDQoNCiMjIExpdHRlcmF0dXJnamVubm9tZ2FuZyANCkZvciDDpSBrYXRybGVnZ2Ugw6Vyc2FrIHRpbCBsw7hubnNmb3Jza2plbGxlciBtZWxsb20gaMO4eWUgb2cgbWluZHJlIGjDuHllIGFyYmVpZHN0YWtlcmUsIGhhciBmb3Jza2VybmUgc2V0dCBww6UgZGUga29nbml0aXZlLCBkZSBpa2tlIGtvZ25pdGl2ZSwgZGUgc29zaWFsZSBlZ2Vuc2thcGVyLCBzYW10IGZhbWlsbGllZm9yaG9sZCBvZyBtdXNrZWxzdHlya2UuDQoNCktvZ25pdGl2ZSBlZ2Vuc2thcGVyIG9wcGZhdHRlciBtZW50YWxlIGZ1bmtzam9uZXIgc29tIHNhbnNpbmcsIG9wcG1lcmtzb21oZXQsIGh1a29tbWVsc2Ugb2cgbG9naXNrZSBldm5lci4gQG1hbHQyMDE5DQpJa2tlIGtvZ25pdGl2ZSBlZ2Vuc2thcGVyIHJlZmVyZXJlciB0aWwgcGVyc29ubGlnZSBlZ2Vuc2thcGVyIHNvbSB2aWxqZXN0eXJrZSwgdXRob2xkZW5oZXQsIGthcmlzbWEgb2cgbGVkZXJlZ2Vuc2thcGVyLiBGb3JlbGRyZW5lcyBzb3Npb8O4a29ub21pc2tlIGVnZW5za2FwZXIgKGlubnRla3QsIHNrb2xlZ2FuZykgc2FtdCBmYW1pbGllZm9yaG9sZGV0IChnZW5ldGlraywgdmVyZGllciBvZyBub3JtZXIpIGJsZSBvZ3PDpSB2dXJkZXJ0IHNvbSBtdWxpZ2Ugw6Vyc2FrIHRpbCB1bGlraGV0ZXIuIEBsdW5kYm9yZzIwMTQuDQpEZWx0YWdlbHNlIGkgZnJpaWRyZXR0LCBza29sZWtsdWJiZXIgb2cgZGF0aW5nIGjDuHJlciB0aWwgc29zaWFsZSBha3Rpdml0ZXRlci4gQGNpbm5pcmVsbGEyMDA5DQogDQogDQojIyBPcHBzdW1tZXJlbmRlIHN0YXRpc3Rpa2sNCg0KYGBge3IgZWNobz1GQUxTRX0NCmhlaWdodHMkaGVpZ2h0SW50IDwtY3V0KGhlaWdodHMkaGVpZ2h0LCBicmVha3MgPSA4KQ0Ka2FibGUoc3VtbWFyeShoZWlnaHRzWywxOjRdKSkNCmBgYA0KDQpgYGB7ciBlY2hvPUZBTFNFfQ0Ka2FibGUoc3VtbWFyeShoZWlnaHRzWyw1OjldKSkNCmBgYA0KDQpEZW5uZSBzdW1tYXJ5IGZ1bmtzam9uZW4gZ2lyIG9zcyBlbiBvcHBzdW1tZXJpbmcgYXYgdW5kZXJzw7hrZWxzZW4uIEh2b3IgZGV0IGJsaXIgZm9ya2xhcnQgaHZvciBtYW5nZSBkZWx0YWtlcmUgZGV0IGVyIHRvdGFsdCBpIGRhdGFzZXR0ZXQsIGh2aWxrZXQga2rDuG5uLCBodmlsa2VuIHNpdmlsc3RhdHVzIGRlIGhhciwgdXRkYW5uZWxzZSwgaHZpbGtlbiBzY29yZSBkZSBmaWtrIHDDpSAiQXJtZWQgRm9yY2VzIFF1YWxpZmljYXRpb24gVGVzdCIsIG9nIGjDuHlkZS4gDQoNClZlcmRpZW5lIHNvbSBrb21tZXIgb3BwIGkgc3VtbWFyeWVuIGZvcmtsYXJlciBvc3MgZm9yc2tqZWxsaWdlIGFzcGVrdGVyIGF2IHVuZGVyc8O4a2Vsc2VuLiBGb3JrbGFyaW5nIGF2IGRlIG3DpWxlZW5oZXRlbmUsIGJydWt0IGkgc3VtbWFyeWV0OiANCiIxc3QgcXUiPSBmw7hyc3RlIGt2YXJ0aWwsICIzcmQgcXUiPSB0cmVkamUga3ZhcnRpbCwgTWVkaWFuPSBtZWRpYW4gYXYgZGVuIHV0dmFsZ3RlIHZhcmlhYmVsZW4sIE1lYW4gPSBnamVubm9tc25pdHQgYXYgdmFyaWFiZWxlbiwgTWluICYgTWF4ID0gbWluc3RlIG9nIG1ha3MgdmVyZGkgYXYgZW4gdmFyaWFiZWwuIE5BID0gTm90IGF2YWlsYWJsZSANCg0KYGBge3IgZWNobz1GQUxTRX0NCmhpc3QoaGVpZ2h0LCBtYWluID0gIkjDuHlkZSIsIHhsYWIgPSAiSW5jaGVzIiwgeWxhYiA9ICJBbnRhbGwiKQ0KYGBgDQpWaSBrYW4gc2UgcMOlIGhpc3RvZ3JhbW1ldCBhdCBow7h5ZGVuIGVyIG5vcm1hbGZvcmRlbHQuIA0KDQpgYGB7cn0NCmhpc3QoaW5jb21lLCBtYWluID0gIklubnRla3QiLCB4bGFiID0gIiQiLCB5bGFiID0gIkFudGFsbCIpDQpgYGANCkZvciBpbm50ZWt0IGthbiB2aSBzZSBhdCBoaXN0b2dyYW1tZXQgaWtrZSBlciBub3JtYWxmb3JkZWx0LiBIZXIgZXIgbWFqb3JpdGV0ZW4gYXYgb2JzZXJ2YXNqb25lbmUgdGlsIHZlbnN0cmUgcMOlIHgtYWtzZW4gb2cgZGV0IGJsaXIgZsOmcnJlIG9ic2VydmFzam9uZXIgZGVzdG8gbGVuZ2VyIHV0IHDDpSB4LWFrc2VuIGVuIGtvbW1lci4gDQoNCmBgYHtyfQ0KZ2dwbG90KGhlaWdodHMsIGFlcyh4ID0gaW5jb21lKSkgKw0KICBnZW9tX3BvaW50KCkgKw0KICBzY2FsZV94X2xvZzEwKCkgDQpgYGANCg0KIyMgUGxvdA0KYGBge3IgZWNobz1GQUxTRX0NCmdncGxvdChoZWlnaHRzLCBtYXBwaW5nID1hZXMoeCA9IGhlaWdodCwgeSA9IGluY29tZSkpKw0KICAgIGdlb21fcG9pbnQoY29sb3IgPSAiYnJvd24zIikNCmBgYA0KYGBge3IgZWNobz1GQUxTRX0NCmdncGxvdChoZWlnaHRzLCBtYXBwaW5nID1hZXMoeCA9IGhlaWdodCwgeSA9IGluY29tZSkpKw0KICAgIGdlb21fcG9pbnQoY29sb3IgPSAiYnJvd24zIikrDQogICAgZmFjZXRfZ3JpZCh+IG1hcml0YWwpDQpgYGANCg0KTWFqb3JpdGV0ZW4gYXYgYWxsZSBvYnNlcnZhc2pvbmVuZSBsaWdnZXIgaSBtZWxsb20gNjAtNzUgaW5jaGVzLCBvZyBkZXQgZXIga3VuIGV0IGxpdGUgYW50YWxsIHNvbSBlciB1dGVuZm9yIGRldHRlLiBEZXQga2FuIGRlcm1lZCBzZSB1dCBzb20gYXQgdmFyaWFibGVuZSBpa2tlIGVyIHPDpnJsaWcgbm9ybWFsZm9yZGVsdCwgbWVuIGF0ICJldCBlbGxlciBhbm5ldCIuDQogDQpgYGB7ciBlY2hvPUZBTFNFfQ0KZ2dwbG90KGhlaWdodHMsIG1hcHBpbmcgPWFlcyh4ID0gaGVpZ2h0LCB5ID0gaW5jb21lKSkrDQogICAgZ2VvbV9wb2ludChjb2xvciA9ICJicm93bjMiKSsNCiAgICBmYWNldF9ncmlkKH4gc2V4KQ0KYGBgDQoNCkRldCBibGUgcmVnbmV0IGV0IGdqZW5ub21zbml0dCBhdiBkZSB0byDDuHZlcnN0ZSB2ZXJkaWVuZSBvZyBnamVubm9tc25pdHRldCBibGUgYnJ1a3QgdGlsIMOlIGVyc3RhdHRlIGFsbGUgdmVyZGllbmUgaSDDuHZlcnN0ZSBzaWt0ZXQuIERldHRlIGVyIHNpa2tlcnQgcGVyc29uZW4gc29tIHRqZW5lciBsYW5ndCBvdmVyIGh2YSBzb20gZXIgbm9ybWFsdCDDpSB0amVuZS4gDQoNCmBgYHtyfQ0KZ2dwbG90KGhlaWdodHMpICsgDQogIGdlb21fYmFyKG1hcHBpbmcgPSBhZXMoeCA9IGhlaWdodCkpDQpgYGANCg0KDQpgYGB7ciwgZWNobz1GQUxTRX0NClZpZXcoaGVpZ2h0cykNCmBgYA0KDQpIZXIgc2thbCB2aSBwcsO4dmUgw6Uga2FydGxlZ2dlIG11bGlnZSDDpXJzYWssIHV0IGZyYSBmb3Jza25pbmdzbGl0dGVyYXR1ci4NCg0KDQpgYGB7cn0NCmdncGxvdChoZWlnaHRzLCBtYXBwaW5nID0gYWVzKGhlaWdodCkpICsNCiAgZ2VvbV9oaXN0b2dyYW0obWFwcGluZyA9IE5VTEwsDQogIGRhdGEgPSBOVUxMLA0KICBzdGF0ID0gImJpbiIsDQogIHBvc2l0aW9uID0gInN0YWNrIiwNCiAgYmlud2lkdGggPSAwLjUsDQogIGJpbnMgPSAzMCwNCiAgbmEucm0gPSBGQUxTRSwNCiAgb3JpZW50YXRpb24gPSBOQSwNCiAgc2hvdy5sZWdlbmQgPSBOQSwNCiAgaW5oZXJpdC5hZXMgPSBUUlVFKQ0KYGBgDQoNCmBgYHtyIGVjaG89RkFMU0V9DQpoZWlnaHRzUG9zSW5jIDwtc3Vic2V0KGhlaWdodHMsIGluY29tZT4wKQ0KZ2dwbG90KGhlaWdodHNQb3NJbmMsIG1hcHBpbmcgPWFlcyh4ID0gaGVpZ2h0SW50LCB5ID0gaW5jb21lKSkrDQogICAgc2NhbGVfeV9jb250aW51b3VzKHRyYW5zID0gc2NhbGVzOjpsb2dfdHJhbnMoKSkrDQogICAgZ2VvbV9ib3hwbG90KCkNCmBgYA0KDQpgYGB7ciBlY2hvPUZBTFNFfQ0KaGVpZ2h0c1Bvc0luYyA8LXN1YnNldChoZWlnaHRzLCBpbmNvbWU+MCkNCmdncGxvdChoZWlnaHRzUG9zSW5jLCBtYXBwaW5nID1hZXMoeCA9IGhlaWdodCwgeSA9IGluY29tZSkpKw0KICAgIHNjYWxlX3lfY29udGludW91cyh0cmFucyA9IHNjYWxlczo6bG9nX3RyYW5zKCkpKw0KICAgIGdlb21fcG9pbnQocG9zaXRpb24gPSAiaml0dGVyIikrDQogICAgZ2VvbV9zbW9vdGgobWV0aG9kID0gImxtIikNCmBgYA0KDQpgYGB7cn0NCmhlaWdodHNQb3NJbmMgPC1zdWJzZXQoaGVpZ2h0cywgaW5jb21lPjApDQpnZ3Bsb3QoaGVpZ2h0c1Bvc0luYywgbWFwcGluZyA9YWVzKHggPSBoZWlnaHQsIHkgPSBpbmNvbWUpKSsNCiAgICBnZW9tX3BvaW50KHBvc2l0aW9uID0gImppdHRlciIpKw0KICAgIGdlb21fc21vb3RoKG1ldGhvZCA9IE1BU1M6OnJsbSwgc2UgPSBGQUxTRSkNCmBgYA0KDQpgYGB7ciBlY2hvPUZBTFNFfQ0Kc3VtbWFyeShsbShpbmNvbWV+aGVpZ2h0LCBkYXRhID0gaGVpZ2h0cykpDQpgYGANCiANCiMjIEtvbmtsdXNqb24NCg==</div>
 
 
 
