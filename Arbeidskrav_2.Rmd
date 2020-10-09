@@ -89,12 +89,22 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")
 ```
 
+<<<<<<< HEAD
+=======
+ Her har vi et plot som viser til inntekten i henhold til høyden. Dette plottet viser en normalfordelt kurve. 
+
+
+>>>>>>> plot2
 ```{r echo=FALSE}
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 
     geom_point(color = "brown3")+
     facet_grid(~ marital)
 ```
+Her har vi plottet antall individer inn i sine sivilstatuser, for å se om dette har en innvirkning på inntekten i forhold til høyde. Her kan vi se forskjellige korrelasjoner mellom sivilstatusene. separerte og enker tjener har den laveste lønnen i uansett betinget høyde. De som tjener mest er de som er gift ihenhold til plottet, samtidig som det er flest gifte i undersøkelsen.
+
+Dette plottet støtter ikke hypotesen om at individer tjener mer på grunn av høyde. Det viser til at de kan være andre faktorer som styrer lønn enn høyde.  
+
 
 ```{r echo=FALSE}
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
@@ -118,6 +128,7 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(position = "jitter")+
     geom_smooth(method = "lm")
 ```
+Her har det blitt laget en regresjon som tar for seg inntekt og høyde. Denne viser til hvor høy korrelasjonen er mellom inntekt og høyde. Vi kan se veldig mange som er under regresjons linjen, noe som kan tyde på at det er noen som tjener ekstremt godt. Dette påvirker modellen som gjør regresjonen mindre troverdig. Gapet mellom 8103$ og 162755$ er såpass stort at det blir tvedyig og vanskelig å tolke. Det er også outliers på alle høydene fra 60-80 inches. 
 
 ```{r}
 heightsPosInc <-subset(heights, income>0)
@@ -129,7 +140,7 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 ```{r echo=FALSE}
 summary(lm(income~height, data = heights))
 ```
- 
+  
 ## Konklusjon
 
 
