@@ -3,7 +3,7 @@
     "path": "~/Data science/Data science/Arbeidskrav_2/Arbeidskrav_2/Arbeidskrav_2.Rmd",
     "project_path": "Arbeidskrav_2.Rmd",
     "type": "r_markdown",
-    "hash": "2918280545",
+    "hash": "1310374615",
     "contents": "",
     "dirty": false,
     "created": 1602071169684.0,
@@ -11,16 +11,16 @@
     "relative_order": 2,
     "properties": {
         "chunk_output_type": "inline",
-        "cursorPosition": "53,42",
-        "scrollLine": "49",
+        "cursorPosition": "137,0",
+        "scrollLine": "105",
         "content_preview_inline": "true"
     },
     "folds": "",
-    "lastKnownWriteTime": 1602244922,
+    "lastKnownWriteTime": 1602245409,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1602244922742,
+    "last_content_update": 1602245409618,
     "read_only": false,
     "read_only_alternatives": []
 }
