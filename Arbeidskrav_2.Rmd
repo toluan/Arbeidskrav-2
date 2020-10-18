@@ -218,4 +218,6 @@ Tar vi derimot bort de variablene som ikke er statistisk signifikante får vi en
 
 Utfra vår siste modell får vi at variabelen "height" ikke er signifikant, noe som forteller oss at den variabelen i det datasettet ikke har påvirkning på inntekten. Det vi legger merke til er at variabelen for hvilket kjønn man er og at den er statistisk signifikant. I modellen kommer det frem at om en er kvinne får en lavere lønn enn menn, og siden det er fysiske forskjeller mellom menn og kvinner kan en dermed ikke utelukke helt at høyde har betydning på inntekt. 
 
-Alt i alt: Veldige gode kommentarer på modellene deres, men det er mangler på noen av de. Dere har en svært god analyse av problemstillingen og en god konklusjon. Forslag til forbedring: vi savner Density plot og begynn på en ny linje etter hver setning. 
+Alt i alt: Veldige gode kommentarer på modellene deres, men det er mangler på noen av de. 
+Dere har en svært god analyse av problemstillingen og en god konklusjon. 
+Forslag til forbedring: vi savner Density plot og begynn på en ny linje etter hver setning. 
