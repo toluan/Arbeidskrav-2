@@ -1,0 +1,9 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+## Tilbakemeldinger
+Dere har svært gode foorklaringer på de fleste modellene, vi savner forklaringer på boxplot og  den siste regresjonen. 
+Dere har en svært god analyse og konklusjon, også pluss for at dere har brukt økonmetrien. 
+Forslag til forbedringer: Vi savner density plot og dere kan gjerne starte på ny linje etter hver setning.
+

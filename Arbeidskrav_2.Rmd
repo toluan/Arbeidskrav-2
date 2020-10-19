@@ -19,6 +19,8 @@ library(tinytex)
 ## 1. Innledning 
 Hva ulike personer tjener og hvilke yrker som tjener mest er noe vi kan lese om hver eneste dag. I denne oppgaven skal vi se om hvordan høyde påvirker lønnen, og vi skal se på om det også er andre variabler som påvirker lønnen. Er det slik at desto høyere man er desto mer får en i lønn, eller er det slik at sivilstatus, utdanning og kjønn også påvirker lønnen? 
 
+Bra innledning
+
 ## 2. Litteraturgjennomgang 
 For å kartlegge årsak til lønnsforskjeller mellom høye og mindre høye arbeidstakere, har forskerne sett på de kognitive, de ikke kognitive, de sosiale egenskaper, samt familieforhold og muskelstyrke.
 
@@ -42,7 +44,7 @@ Hvordan blir, alt dette, reflektert i praksis? I artikkelen “Height, Income, a
 
 Her har vi lagt frem en bit av forskningslitteratur på «høydefenomenet». Det er mange elementer som samspiller i valget av ansatte. Gir vi, uten en fast forklaring, mulighet til høyere mennesker for å utvikle seg, mens de mindre høye ble sosial stigmatisert? Fra gammelt av daterer oppfatning om at de høge mennesker er beskyttere, ledere og trygghetsgivere. Kan vi, med «den gamle oppfatningen» forsvare datidens vekstdiskriminering? Eller er det på tide å vokse opp?
 
- 
+ bra at dere har med noe teori, men det kan være i det meste laget. 
 ## 3. Analyse
 
 ### 3.1 Oppsummerende statistikk
@@ -69,6 +71,8 @@ Verdiene som kommer opp i summary forklarer oss forskjellige aspekter av unders�
 For inntekt kan vi se at den laveste inntekten er 0 dollar og den høyeste er 343 830 dollar. Gjennomsnittet er på 41204 dollar. Vi kan se at det er stor forskjell mellom gjennomsnittet og den høyeste verdien, og vi kan allerede her anta at fordelingen ikke er normalfordelt. 
 Variabelen høyde har en minimum og en maksimum verdi på 52 og 84 inches, og gjennomsnittet er 67 inches. Med et gjennomsnitt nokså midt i mellom minimum og maksimum, kan vi anta at det er normalfordelt. 
 
+god forklaring. 
+
 ### 3.2 En variabel analyse
 
 ```{r echo=FALSE}
@@ -87,6 +91,8 @@ ggplot(heightsPosInc, mapping = aes(height)) +
 
 Histogrammet bekrefter antagelsen vår om høyden er normalfordelt. Det tyder på at datasettet er jevnt fordelt med tanke på deltakerne som er involvert. Det ser ut som et tilfeldig utvalg av individer er plukket ut til undersøkelsen, og at vi på bakgrunn av det ikke får noen tydelig bias. 
 
+bra! avansert koding.
+
 
 ```{r echo=FALSE}
 hist(heightsPosInc$income, main = "Inntekt", xlab = "$", ylab = "Antall")
@@ -100,6 +106,8 @@ hist(heightsPosInc$logincome, main = "Inntekt", xlab = "Dollar", ylab = "Antall"
 ```
 Logaritmen som har foretatt en transformasjon, noe som fører til at grafen har blitt tilnærmet normalfordelt med noen "outliers". 
 
+gode forklaringer. 
+
 ### 3.3 To variabler analyse
 ```{r echo=FALSE}
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
@@ -107,6 +115,7 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 ```
 
  Her har vi et plot som viser til inntekten i henhold til høyden. Dette plottet viser en normalfordelt kurve. 
+ Her kunne dere forklart hva de øverste prikkene er. 
 
 ```{r echo=FALSE}
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
@@ -128,13 +137,15 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 
 Det ble regnet et gjennomsnitt av de to øverste verdiene og gjennomsnittet ble brukt til å erstatte alle verdiene i øverste siktet. Dette er sikkert personen som tjener langt over hva som er normalt å tjene. 
 
+kan nevnes tidligere. 
+
 
 ```{r echo=FALSE}
 ggplot(heightsPosInc, mapping =aes(x = heightInt, y = income))+
     scale_y_continuous(trans = scales::log_trans())+
     geom_boxplot()
 ```
-
+Her kunne dere gitt en forklaring på hva vi ser. 
 ```{r echo=FALSE}
 heightsPosInc <-subset(heights, income>0)
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
@@ -145,18 +156,22 @@ ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
 
 Her har det blitt laget en regresjon som tar for seg inntekt og høyde. Denne viser til hvor høy korrelasjonen er mellom inntekt og høyde. Vi kan se veldig mange som er under regresjons linjen, noe som kan tyde på at det er noen som tjener ekstremt godt. Dette påvirker modellen som gjør regresjonen mindre troverdig. Gapet mellom 8103$ og 162755$ er såpass stort at det blir tvedyig og vanskelig å tolke. Det er også outliers på alle høydene fra 60-80 inches. 
 
+bra! 
+
 ```{r echo=FALSE}
 heightsPosInc <-subset(heights, income>0)
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(position = "jitter")+
     geom_smooth(method = MASS::rlm, se = FALSE)
 ```
-
+ønsker en forklaring her også. 
 ```{r echo=FALSE}
 m1 <- lm(income ~ height + marital + sex + education + afqt + age + weight, heights)
 summary(m1)
 ```
 Når vi kun legger til variabelen height får vi at for hver ekstra inch en person er, kan er forvente 2982 dollar ekstra i lønn. Både skjæringspunktet og height er statistisk signifikant. 
+
+Veldig bra!
 
 ```{r echo=FALSE}
 m2 <- lm(income ~ height + marital, heights)
@@ -202,3 +217,7 @@ Tar vi derimot bort de variablene som ikke er statistisk signifikante får vi en
 ## 4. Konklusjon
 
 Utfra vår siste modell får vi at variabelen "height" ikke er signifikant, noe som forteller oss at den variabelen i det datasettet ikke har påvirkning på inntekten. Det vi legger merke til er at variabelen for hvilket kjønn man er og at den er statistisk signifikant. I modellen kommer det frem at om en er kvinne får en lavere lønn enn menn, og siden det er fysiske forskjeller mellom menn og kvinner kan en dermed ikke utelukke helt at høyde har betydning på inntekt. 
+
+Alt i alt: Veldige gode kommentarer på modellene deres, men det er mangler på noen av de. 
+Dere har en svært god analyse av problemstillingen og en god konklusjon. 
+Forslag til forbedring: vi savner Density plot og begynn på en ny linje etter hver setning. 
