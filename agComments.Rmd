@@ -1,0 +1,14 @@
+---
+title: "Kommentarer fra ag"
+output: html_notebook
+---
+
+1.  Flott litteraturgjennomgang
+
+2.  Dere lager et nytt datasett for inntekter større enn null. Jeg vil foreslå å heller lage en kopi av heights og så benytte en enkel filter() kommando i starten av en pipe for å plukke ur subsets. Langt mer fleksibelt.
+
+3.  Dere blader klassisk plot() og ggplot. Jeg vil forslå å heller benytte ggplot for alle plot-ene. Er den "moderne" måten å jobbe på og gir et mer helhetlig preg.
+
+4.  Bruk `colour` til å representere en variable, ikke som pynt.
+
+5.  Et kjekt lite paper som dere absolutt kan være stolt av ;-)

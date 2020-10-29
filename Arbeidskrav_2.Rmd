@@ -7,7 +7,9 @@ bibliography: heights.bib
 lang: nb-no
 ---
 
-```{r set up, echo=FALSE, include=FALSE}
+```{r setup, echo=FALSE, include=FALSE}
+# setup i et ord. Code-chunk med navnet setup 
+# blir kjørt først hver gang en kjører en code-chunck
 library(modelr)
 library(knitr)
 library(ggplot2)
@@ -49,11 +51,12 @@ Her har vi lagt frem en bit av forskningslitteratur på «høydefenomenet». Det
 
 ```{r echo=FALSE}
 heightsPosInc <-subset(heights, income>0)
-heightsPosInc$heightInt <-cut(heightsPosInc$height, breaks = 8)
+heightsPosInc$heightInt <-cut(heightsPosInc$height,
+                              breaks = 8)
 ```
 
 ```{r echo=FALSE}
-heights$heightInt <-cut(heights$height, breaks = 8)
+heights$heightInt <- cut(heights$height, breaks = 8)
 kable(summary(heights[,1:4]))
 ```
 
@@ -72,24 +75,31 @@ Variabelen høyde har en minimum og en maksimum verdi på 52 og 84 inches, og gj
 ### 3.2 En variabel analyse
 
 ```{r echo=FALSE}
-ggplot(heightsPosInc, mapping = aes(height)) +
-  geom_histogram(mapping = NULL,
-  data = NULL,
-  stat = "bin",
-  position = "stack",
-  binwidth = 0.5,
-  bins = 30,
-  na.rm = FALSE,
-  orientation = NA,
-  show.legend = NA,
-  inherit.aes = TRUE)
+# forenkler litt
+ggplot(heightsPosInc, mapping = aes(x = height)) +
+  geom_histogram(
+    stat = "bin",
+    position = "stack",
+    binwidth = 0.5,
+    bins = 30,
+    na.rm = FALSE)
 ```
 
 Histogrammet bekrefter antagelsen vår om høyden er normalfordelt. Det tyder på at datasettet er jevnt fordelt med tanke på deltakerne som er involvert. Det ser ut som et tilfeldig utvalg av individer er plukket ut til undersøkelsen, og at vi på bakgrunn av det ikke får noen tydelig bias. 
 
-
 ```{r echo=FALSE}
 hist(heightsPosInc$income, main = "Inntekt", xlab = "$", ylab = "Antall")
+```
+
+```{r echo=FALSE}
+# samme vha pipes og tidyverse
+heights %>% 
+  filter(income > 0) %>% 
+  ggplot(mapping = aes(x = income)) +
+  geom_histogram(binwidth = 5000) +
+  ggtitle("Inntekt") +
+  xlab("$") +
+  ylab("Antall")
 ```
 
 For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten av observasjonene til venstre på x-aksen og det blir færre observasjoner desto lenger ut på x-aksen en kommer. Vi gjør dermed om inntekten til logaritmer slik at vi får et nytt histogram. Der får vi at inntekten er normalfordelt. 
@@ -98,20 +108,56 @@ For inntekt kan vi se at histogrammet ikke er normalfordelt. Her er majoriteten 
 heightsPosInc$logincome <- log(heightsPosInc$income)
 hist(heightsPosInc$logincome, main = "Inntekt", xlab = "Dollar", ylab = "Antall")
 ```
+
+```{r echo=FALSE}
+# samme vha pipes og tidyverse
+heights %>% 
+  filter(income > 0) %>% 
+  ggplot(mapping = aes(x = log(income))) +
+  geom_histogram(binwidth = 0.10) +
+  ggtitle("Inntekt") +
+  xlab("Ln av inntekt i $") +
+  ylab("Antall")
+```
+
 Logaritmen som har foretatt en transformasjon, noe som fører til at grafen har blitt tilnærmet normalfordelt med noen "outliers". 
 
 ### 3.3 To variabler analyse
+
 ```{r echo=FALSE}
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     geom_point(color = "brown3")
 ```
 
+```{r echo=FALSE}
+# skrevet om til pipes og tidyverse. Bruk default clour så
+# lenge fargen ikke brukes til å illustrere noe. Size 
+# og alpha  kan settes for å vise hvor en har flest
+# observasjoner. Jitter er også en mulighet, men den gir
+# en illusjon om at vi har mer variasjon i x-variabelen
+# enn vi egentlig har
+heights %>% 
+  filter(income > 0) %>% 
+  ggplot(mapping = aes(x = height, y = income))+
+    geom_point(size = 0.5,
+               alpha = 0.2# ,position = "jitter"
+               )
+```
+
  Her har vi et plot som viser til inntekten i henhold til høyden. Dette plottet viser en normalfordelt kurve. 
 
 ```{r echo=FALSE}
-ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
-
-    geom_point(color = "brown3")+
+# la colour beskrive kjønn, så har fargen en
+# funksjon. Jeg liker size og alpha slik at vi
+# ser hvor observasjonene er. Får kanskje et klarere bilde hvis vi tar bort de 2% høyeste
+heights %>% 
+  filter(income > 0) %>% 
+  filter(income < 300000) %>% 
+ggplot(mapping = aes(x = height,
+                     y = income,
+                     colour = sex)
+       ) +
+    geom_point(size = 0.7, alpha = 0.3)+
     facet_grid(~ marital)
 ```
 
@@ -121,12 +167,22 @@ Det plottet støtter ikke hypotesen om at individer tjener mer på grunn av høy
 
 
 ```{r echo=FALSE}
-ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
-    geom_point(color = "brown3")+
-    facet_grid(~ sex)
+# The glory of pipes and tidyverse ;-)
+heights %>% 
+  filter(income > 0) %>% 
+  filter(income < 300000) %>%
+  filter(!is.na(education)) %>% 
+  mutate(
+    eduBin = cut(education, breaks = c(0,12,14,16,22), labels = c("hs", "lc", "cu", "cg"), right = TRUE)
+  ) %>%
+  ggplot(mapping = aes(x = height, y = income, colour = eduBin)) +
+    geom_point(size = 1, alpha = 0.4, position = "jitter") +
+    facet_grid(~ sex) +
+  theme(legend.position = "bottom")
+  
 ```
 
-Det ble regnet et gjennomsnitt av de to øverste verdiene og gjennomsnittet ble brukt til å erstatte alle verdiene i øverste siktet. Dette er sikkert personen som tjener langt over hva som er normalt å tjene. 
+Det ble regnet et gjennomsnitt av de 2% høyeste inntekten (av personvernshensyn) og gjennomsnittet ble brukt til å erstatte alle verdiene i dette øverste siktet. Dette er sikkert personen som tjener langt over hva som er normalt å tjene. 
 
 
 ```{r echo=FALSE}
@@ -136,6 +192,8 @@ ggplot(heightsPosInc, mapping =aes(x = heightInt, y = income))+
 ```
 
 ```{r echo=FALSE}
+# Dere bør opplyse om at det har blitt gjort en log-trans
+# på y aksen (inntekt)
 heightsPosInc <-subset(heights, income>0)
 ggplot(heightsPosInc, mapping =aes(x = height, y = income))+
     scale_y_continuous(trans = scales::log_trans())+
@@ -202,3 +260,5 @@ Tar vi derimot bort de variablene som ikke er statistisk signifikante får vi en
 ## 4. Konklusjon
 
 Utfra vår siste modell får vi at variabelen "height" ikke er signifikant, noe som forteller oss at den variabelen i det datasettet ikke har påvirkning på inntekten. Det vi legger merke til er at variabelen for hvilket kjønn man er og at den er statistisk signifikant. I modellen kommer det frem at om en er kvinne får en lavere lønn enn menn, og siden det er fysiske forskjeller mellom menn og kvinner kan en dermed ikke utelukke helt at høyde har betydning på inntekt. 
+
+## Referanseliste
